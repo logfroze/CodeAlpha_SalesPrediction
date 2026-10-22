@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #edf1f7;
+    color: #0f172a;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Brutalism + Skeuomorphism + Neumorphism LIGHT THEME System */
+
+/* Machine Chassis & Panels */
+.brutal-panel {
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 
+    4px 4px 0px #0f172a,
+    inset 1px 1px 0px rgba(255, 255, 255, 1),
+    inset -1px -1px 0px rgba(0, 0, 0, 0.04);
+}
+
+.brutal-card {
+  background-color: #f8fafc;
+  border: 2px solid #0f172a;
+  box-shadow: 
+    3px 3px 0px #0f172a,
+    inset 1px 1px 0px rgba(255, 255, 255, 1);
+}
+
+/* Neumorphic Recessed Bay (Stamping / Debossed Wells) */
+.neu-bay {
+  background-color: #e5eaf2;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 
+    inset 2px 2px 5px rgba(15, 23, 42, 0.12),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.95),
+    0 1px 0px rgba(255, 255, 255, 0.9);
+}
+
+/* Mechanical Push Buttons (Tactile travel + Brutalist hard shadow) */
+.mech-btn {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+  box-shadow: 
+    0 3px 0px #0f172a,
+    0 4px 6px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0px rgba(255, 255, 255, 1);
+  transition: all 0.08s ease-in-out;
+}
+
+.mech-btn:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-1px);
+  box-shadow: 
+    0 4px 0px #0f172a,
+    0 6px 10px rgba(15, 23, 42, 0.1);
+}
+
+.mech-btn:active {
+  background-color: #e2e8f0;
+  transform: translateY(3px);
+  box-shadow: 
+    0 0px 0px #0f172a,
+    inset 0 2px 4px rgba(15, 23, 42, 0.2);
+}
+
+.mech-btn-active {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 0px #0f172a,
+    inset 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+.mech-btn-primary {
+  background-color: #f59e0b;
+  color: #000000;
+  font-weight: 700;
+  border: 2px solid #0f172a;
+  box-shadow: 
+    0 3px 0px #0f172a,
+    0 4px 6px rgba(15, 23, 42, 0.1),
+    inset 0 1px 0px rgba(255, 255, 255, 0.4);
+}
+
+.mech-btn-primary:hover {
+  background-color: #fbbf24;
+  transform: translateY(-1px);
+  box-shadow: 
+    0 4px 0px #0f172a,
+    0 6px 10px rgba(15, 23, 42, 0.15);
+}
+
+.mech-btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 
+    0 0px 0px #0f172a,
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Mechanical Fader / Range Slider in Light Theme */
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background-color: #e2e8f0;
+  border-radius: 2px;
+  border: 1.5px solid #0f172a;
+  box-shadow: 
+    inset 1.5px 1.5px 3px rgba(15, 23, 42, 0.2),
+    0 1px 0px rgba(255, 255, 255, 0.9);
+}
+
+/* Rectangular Tactile Audio Fader Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 26px;
+  width: 18px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  margin-top: -9px;
+  cursor: pointer;
+  box-shadow: 
+    3px 3px 0px #0f172a,
+    inset 0 1px 0px rgba(255, 255, 255, 1),
+    inset 0 -1px 0px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.1s ease;
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #f8fafc;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  background-color: #e2e8f0;
+  box-shadow: 
+    1px 1px 0px #0f172a,
+    inset 0 2px 3px rgba(15, 23, 42, 0.25);
+}
